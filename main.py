@@ -80,7 +80,7 @@ async def query_latest_deposits(limits: int = 10, ctx: Context = None) -> str:
         ]
         for deposit in deposits
     ]    
-    headers = ["from", "amount", "blockNumber", "timestamp", "commitment"]
+    headers = ["from", "amount", "blockNumber", "time", "commitment"]
     table = tabulate(table_data, headers=headers, tablefmt="grid")
     
     return table
